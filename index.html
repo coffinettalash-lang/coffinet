@@ -4,94 +4,124 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>کافی‌نت تلاش</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body{
-    margin:0;
-    font-family:Tahoma,sans-serif;
-    background:linear-gradient(135deg,#0f766e,#2563eb);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap');
+
+body {
+    margin:0; padding:20px;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #0f766e, #2563eb);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.card{
-    width:90%;
-    max-width:420px;
-    background:white;
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 24px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
+h1 { color: #0f766e; margin: 0 0 10px 0; font-size: 28px; }
+p { color: #555; margin-bottom: 25px; }
 
-h1{
-    color:#0f766e;
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    margin: 10px 0;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all 0.3s;
 }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
-p{
-    color:#666;
-}
+.whatsapp { background: #25D366; }
+.telegram { background: #229ED9; }
+.rubika { background: #E11D48; }
+.eitaa { background: #F59E0B; }
+.shad { background: #16A34A; }
+.bale { background: #2563EB; }
 
-.btn{
-    display:block;
-    text-decoration:none;
-    color:white;
-    padding:15px;
-    margin:12px 0;
-    border-radius:12px;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.whatsapp{background:#25D366;}
-.telegram{background:#229ED9;}
-.rubika{background:#E11D48;}
-.eitaa{background:#F59E0B;}
-.shad{background:#16A34A;}
-.bale{background:#2563EB;}
-
-.btn:hover{
-    opacity:.9;
+.save-contact {
+    background: #22c55e;
+    color: white;
+    padding: 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    display: block;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 17px;
 }
 </style>
-
 </head>
-
 <body>
 
 <div class="card">
+    <h1>💻 کافی‌نت تلاش</h1>
+    <p>برای ارتباط، یکی از پیام‌رسان‌های زیر را انتخاب کنید.</p>
 
-<h1>💻 کافی‌نت تلاش</h1>
+    <!-- ذخیره شماره -->
+    <a href="#" onclick="saveContact()" class="save-contact">
+        📱 ذخیره شماره در مخاطبین
+    </a>
 
-<p>برای ارتباط، یکی از پیام‌رسان‌های زیر را انتخاب کنید.</p>
+    <!-- لینک‌های پیام‌رسان -->
+    <a href="https://wa.me/989037362748" target="_blank" class="btn whatsapp">
+        📱 واتساپ
+    </a>
 
-<a href="https://wa.me/989037362748" target="_blank" style="text-decoration: none;">
-   📱 واتساپ
-</a>
+    <a href="https://t.me/Cofinet_talash" target="_blank" class="btn telegram">
+        ✈️ تلگرام
+    </a>
 
-<a class="btn telegram" href="https://t.me/Cofinet_talash">
-✈️ تلگرام
-</a>
+    <a href="https://rubika.ir/Cofiinettalash" target="_blank" class="btn rubika">
+        🔴 روبیکا
+    </a>
 
-<a class="btn rubika" href="https://rubika.ir/Cofiinettalash">
-🔴 روبیکا
-</a>
+    <a href="https://eitaa.com/cofiinettalash" target="_blank" class="btn eitaa">
+        📣 ایتا
+    </a>
 
-<a class="btn eitaa" href="https://eitaa.com/cofiinettalash">
-📣 ایتا
-</a>
+    <a href="https://shad.ir/coffiineet_talash" target="_blank" class="btn shad">
+        🟢 شاد
+    </a>
 
-<a class="btn shad" href="https://shad.ir/coffiineet_talash">
-🟢 شاد
-</a>
-
-<a class="btn bale" href="https://ble.ir/coffi_talash">
-💬 بله
-</a>
-
+    <a href="https://ble.ir/coffi_talash" target="_blank" class="btn bale">
+        💬 بله
+    </a>
 </div>
+
+<script>
+function saveContact() {
+    const vCard = `BEGIN:VCARD
+VERSION:3.0
+FN:کافی‌نت تلاش
+TEL;TYPE=CELL:+989037362748
+END:VCARD`;
+
+    const blob = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'کافی‌نت_تلاش.vcf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+</script>
 
 </body>
 </html>
