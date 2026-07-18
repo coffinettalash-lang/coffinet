@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کافی‌نت تلاش</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Tahoma,sans-serif;
+    background:linear-gradient(135deg,#0f766e,#2563eb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    width:90%;
+    max-width:420px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+h1{
+    color:#0f766e;
+}
+
+p{
+    color:#666;
+}
+
+.btn{
+    display:block;
+    text-decoration:none;
+    color:white;
+    padding:15px;
+    margin:12px 0;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.whatsapp{background:#25D366;}
+.telegram{background:#229ED9;}
+.rubika{background:#E11D48;}
+.eitaa{background:#F59E0B;}
+.shad{background:#16A34A;}
+.bale{background:#2563EB;}
+
+.btn:hover{
+    opacity:.9;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💻 کافی‌نت تلاش</h1>
+
+<p>برای ارتباط، یکی از پیام‌رسان‌های زیر را انتخاب کنید.</p>
+
+<a class="btn whatsapp" href="https://wa.me/989037362748">
+📱 واتساپ
+</a>
+
+<a class="btn telegram" href="https://t.me/Cofinet_talash">
+✈️ تلگرام
+</a>
+
+<a class="btn rubika" href="https://rubika.ir/Cofiinettalash">
+🔴 روبیکا
+</a>
+
+<a class="btn eitaa" href="https://eitaa.com/cofiinettalash">
+📣 ایتا
+</a>
+
+<a class="btn shad" href="https://shad.ir/coffiineet_talash">
+🟢 شاد
+</a>
+
+<a class="btn bale" href="https://ble.ir/coffi_talash">
+💬 بله
+</a>
+
+</div>
+
+</body>
+</html>
