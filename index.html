@@ -72,8 +72,8 @@ p { color: #555; margin-bottom: 25px; }
     <h1>💻 کافی‌نت تلاش</h1>
     <p>برای ارتباط، یکی از پیام‌رسان‌های زیر را انتخاب کنید.</p>
 
-    <!-- ذخیره شماره -->
-    <a href="#" onclick="saveContact()" class="save-contact">
+    <!-- دکمه ذخیره شماره - بهینه برای iPhone و Android -->
+    <a id="save-contact" href="#" class="save-contact">
         📱 ذخیره شماره در مخاطبین
     </a>
 
@@ -104,23 +104,22 @@ p { color: #555; margin-bottom: 25px; }
 </div>
 
 <script>
-function saveContact() {
+document.getElementById('save-contact').addEventListener('click', function(e) {
+    e.preventDefault();
+    
     const vCard = `BEGIN:VCARD
 VERSION:3.0
 FN:کافی‌نت تلاش
 TEL;TYPE=CELL:+989037362748
 END:VCARD`;
 
-    const blob = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'کافی‌نت_تلاش.vcf';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-}
+    // بهترین روش برای iPhone + Android
+    const encodedVCard = encodeURIComponent(vCard);
+    const dataUri = 'data:text/vcard;charset=utf-8,' + encodedVCard;
+    
+    // باز کردن مستقیم
+    window.location.href = dataUri;
+});
 </script>
 
 </body>
