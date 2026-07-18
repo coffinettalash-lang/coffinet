@@ -10,109 +10,145 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap');
 
 body {
-    margin:0; padding:20px;
-    font-family: 'Vazirmatn', Tahoma, sans-serif;
-    background: linear-gradient(135deg, #0f766e, #2563eb);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin:0;
+    padding:20px;
+    font-family:'Vazirmatn',Tahoma,sans-serif;
+    background:linear-gradient(135deg,#0f766e,#2563eb);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-.card {
-    width: 100%;
-    max-width: 420px;
-    background: white;
-    border-radius: 24px;
-    padding: 30px 25px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+
+.card{
+    width:100%;
+    max-width:420px;
+    background:#fff;
+    border-radius:24px;
+    padding:30px 25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
-h1 { color: #0f766e; margin: 0 0 10px 0; font-size: 28px; }
-p { color: #555; margin-bottom: 25px; }
 
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    text-decoration: none;
-    color: white;
-    padding: 16px;
-    margin: 10px 0;
-    border-radius: 16px;
-    font-size: 17px;
-    font-weight: bold;
-    transition: all 0.3s;
+h1{
+    color:#0f766e;
+    margin:0 0 10px;
+    font-size:28px;
 }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
-.whatsapp { background: #25D366; }
-.telegram { background: #229ED9; }
-.rubika { background: #E11D48; }
-.eitaa { background: #F59E0B; }
-.shad { background: #16A34A; }
-.bale { background: #2563EB; }
+p{
+    color:#555;
+    margin-bottom:25px;
+}
 
-.save-contact {
-    background: #22c55e;
-    color: white;
-    padding: 16px;
-    border-radius: 16px;
-    text-decoration: none;
-    display: block;
-    margin: 20px 0;
-    font-weight: bold;
-    font-size: 17px;
+.btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    text-decoration:none;
+    color:#fff;
+    padding:16px;
+    margin:10px 0;
+    border-radius:16px;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.whatsapp{background:#25D366;}
+.telegram{background:#229ED9;}
+.rubika{background:#E11D48;}
+.eitaa{background:#F59E0B;}
+.shad{background:#16A34A;}
+.bale{background:#2563EB;}
+
+.save-contact{
+    background:#22c55e;
+    color:#fff;
+    padding:16px;
+    border-radius:16px;
+    text-decoration:none;
+    display:block;
+    margin:20px 0;
+    font-weight:bold;
+    font-size:17px;
 }
 </style>
 </head>
 <body>
 
 <div class="card">
-    <h1>💻 کافی‌نت تلاش</h1>
-    <p>برای ارتباط، یکی از پیام‌رسان‌های زیر را انتخاب کنید.</p>
+<h1>💻 کافی‌نت تلاش</h1>
+<p>برای ارتباط، یکی از پیام‌رسان‌های زیر را انتخاب کنید.</p>
 
-    <a id="save-contact" href="#" class="save-contact">
-        📱 ذخیره شماره در مخاطبین
-    </a>
+<a id="save-contact" href="#" class="save-contact">
+📱 ذخیره شماره در مخاطبین
+</a>
 
-    <a href="https://wa.me/989037362748" target="_blank" class="btn whatsapp">
-        📱 واتساپ
-    </a>
+<a href="https://wa.me/989037362748" target="_blank" class="btn whatsapp">
+📱 واتساپ
+</a>
 
-    <a href="https://t.me/Cofinet_talash" target="_blank" class="btn telegram">
-        ✈️ تلگرام
-    </a>
+<a href="https://t.me/Cofinet_talash" target="_blank" class="btn telegram">
+✈️ تلگرام
+</a>
 
-    <a href="https://rubika.ir/Cofiinettalash" target="_blank" class="btn rubika">
-        🔴 روبیکا
-    </a>
+<a href="https://rubika.ir/Cofiinettalash" target="_blank" class="btn rubika">
+🔴 روبیکا
+</a>
 
-    <a href="https://eitaa.com/cofiinettalash" target="_blank" class="btn eitaa">
-        📣 ایتا
-    </a>
+<a href="https://eitaa.com/cofiinettalash" target="_blank" class="btn eitaa">
+📣 ایتا
+</a>
 
-    <a href="https://shad.ir/coffiineet_talash" target="_blank" class="btn shad">
-        🟢 شاد
-    </a>
+<a href="https://shad.ir/coffiineet_talash" target="_blank" class="btn shad">
+🟢 شاد
+</a>
 
-    <a href="https://ble.ir/coffi_talash" target="_blank" class="btn bale">
-        💬 بله
-    </a>
+<a href="https://ble.ir/coffi_talash" target="_blank" class="btn bale">
+💬 بله
+</a>
+
 </div>
 
 <script>
 document.getElementById('save-contact').addEventListener('click', function(e) {
     e.preventDefault();
-    
+
     const vCard = `BEGIN:VCARD
 VERSION:3.0
 FN:کافی‌نت تلاش
+ORG:کافی‌نت تلاش
 TEL;TYPE=CELL:+989037362748
 END:VCARD`;
 
-    const dataUri = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vCard);
-    window.location.href = dataUri;
+    const blob = new Blob([vCard], {
+        type: 'text/vcard;charset=utf-8'
+    });
+
+    if (window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(blob, 'Coffinet-Talash.vcf');
+        return;
+    }
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Coffinet-Talash.vcf';
+    document.body.appendChild(a);
+    a.click();
+
+    setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }, 100);
 });
 </script>
 
